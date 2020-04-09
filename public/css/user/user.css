@@ -1,0 +1,83 @@
+/*boutons*/
+.btn-color{
+    background-color: #061d30;
+    color: #FFFFFF;
+}
+.btn-color:hover{
+    opacity: 0.5;
+    color: #FFFFFF;
+}
+
+/*sidebar*/
+.body-overlay{
+    width: 100vw;
+    height: 100vh;
+    /*display: none;*/
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+}
+.sidebar{
+    position: absolute;
+    width: 250px;
+    top: 0;
+    left: -0px;
+    padding-top: 7rem;
+    min-height: 100vh;
+    background-color: #061d30;
+    color: #ffffff;
+    z-index: 1;
+    transform: translateX(-250px);
+    transition: transform .3s ease-out;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar a{
+    color: #ffffff;
+}
+.sidebar.sidebar-active{
+    /*min-width: 80px;*/
+    /*max-width: 80px;*/
+    text-align: left;
+    transform: translateX(0);
+}
+
+/*barre de navigation*/
+.navbar{
+    background-color: #061d30;
+    font-size: 1.1rem;
+    z-index: 2;
+}
+.navbar-brand{
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: #061d30;
+}
+.navbar-brand:hover{
+    color: #004684!important;
+}
+.navbar-nav a{
+    color: #ffffff;
+    font-weight: bold;
+}
+.navbar-nav a:hover{
+    color: #004684!important;
+}
+.active a{
+    color: #004684!important;
+}
+.dropdown-item{
+    color: #061d30!important;
+}
+
+/*footer*/
+footer{
+    background-color: #061d30;
+    padding: 2% 0;
+}
+footer, footer a{
+    color: #FFFFFF;
+}
