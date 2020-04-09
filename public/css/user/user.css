@@ -81,3 +81,9 @@ footer{
 footer, footer a{
     color: #FFFFFF;
 }
+
+/*videos miniatures*/
+.video-mini{
+    width: 100%;
+    height: auto;
+}
