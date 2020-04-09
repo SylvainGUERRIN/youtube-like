@@ -15,6 +15,22 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        admin:
+            pattern: ^/compo-admin
+            anonymous: true
+
+            provider: in_database
+
+            form_login:
+                login_path: admin_connexion
+                check_path: admin_connexion
+                default_target_path: dashboard
+                always_use_default_target_path: true
+                csrf_token_generator: security.csrf.token_manager
+
+            logout:
+                path: admin_deconnexion
+                target: admin_connexion
         user:
             pattern: ^/user/account
             anonymous: true
@@ -45,3 +61,8 @@ security:
         - { path: ^/user/account/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/user/account/inscription, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/user/account, roles: ROLE_USER }
+
+        - { path: ^/compo-admin/account/admin-connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/compo-admin/account/inscription, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/compo-admin, roles: ROLE_ADMIN }
+        - { path: ^/compo-admin/administration, roles: ROLE_ADMIN }
